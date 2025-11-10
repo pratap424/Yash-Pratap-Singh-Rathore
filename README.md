@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="banner.png" alt="Yash Pratap Singh Rathore — AI, Robotics, Vision-Language, Edge ML" width="100%">
+</p>
+
+
+
 <h1 align="center">👋 Hi, I'm Yash Pratap Singh Rathore</h1>
 <h3 align="center">AI Developer | Researcher | Robotics & Explainable ML Enthusiast</h3>
 
