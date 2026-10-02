@@ -1,168 +1,73 @@
-<p align="center">
-  <img src="banner.png" alt="Yash Pratap Singh Rathore — AI, Robotics, Vision-Language, Edge ML" width="100%" style="border-radius: 12px; margin-top: 10px; margin-bottom: 10px;">
-</p>
+# Yash Pratap Singh Rathore
 
-<h1 align="center">👋 Hi, I'm Yash Pratap Singh Rathore</h1>
-<h3 align="center">AI Developer | Researcher | Robotics & Explainable ML Enthusiast</h3>
+M.Tech (Research) in Robotics, IIT Mandi — Centre for AI and Robotics.
 
----
+I work on semantic perception for autonomous UAVs under edge compute constraints. The
+recurring result across my projects is that on constrained hardware the useful operating
+metric is not per-frame accuracy but **calibrated confidence**: small models are reliable
+inside a measured competence region, and the final decision belongs in code rather than in
+the network.
 
- 🚀 About Me
-- 🎓 Student at IIT Mandi
-- 🤖 Passionate about AI, Vision-Language Navigation, and Edge Intelligence
-- 💡 Focused on building Explainable, Responsible, and Real-Time AI Systems
-- 🔍 Research Interests: Vision-Language Models, Autonomous Drones, Explainability, and ML System Deployment
+Most of my systems run on an 8GB Jetson Orin Nano that is shared with a real-time flight
+control loop, which sets the budget for everything else.
 
----
-
- 🧠 What I’ve Worked On
-
-- ⚙️ Worked on 6+ distinct technical and research projects across:
-  - Vision-Language Navigation (Sim2Real & ROS)
-  - Edge ML Deployment (Jetson Nano / Jetson Xavier)
-  - Deepfake Detection and Digital Forensics
-  - Explainable AI and Responsible ML Apps
-  - Autonomous Drone Flight (FlightGPT / LLVM Drone)
-  - Mechatronics & Embedded System Design (Home Automation, Adaptive Shading)
-
-- 🧩 Built interactive Streamlit apps showcasing explainability and real-time model predictions  
-  using SHAP, LIME, and custom visualization frameworks.
-
-- 📊 Specialized in feature engineering, model optimization, and interpretable tabular modeling  
-  with consistent AUC > 0.68 in national machine-learning hackathons.
+**Interests:** edge inference and model optimization · vision-language models ·
+out-of-distribution and anomaly detection · visual SLAM and monocular depth · UAV autonomy
 
 ---
 
- 🏆 Achievements & Hackathons
+## Publications
 
-| Event | Achievement |
-|--------|--------------|
-| 🥇 Zentej Hackathon 2025 | Winner — Deepfake Detection Project; completed all technical milestones and proposal phase |
-| 🧠 AIHack India 2025 (IIT Mandi × AiFul Japan) | Top 10 on leaderboard — Built an Explainable Credit Risk App with live SHAP visualizations |
-| ⚡ Machine Learning Competitions | Achieved AUC > 0.68 through advanced feature engineering and model optimization |
-| ✈️ FlightGPT / LLVM Drone | Developed and deployed real-time obstacle avoidance on NVIDIA Jetson hardware |
-| 💳 Credit Scoring Model Enhancements | Improved credit risk model accuracy from mid-0.67 upward through categorical and numerical feature optimization |
-| 💻 Prototyping & Research Demos | Built and showcased multiple interactive ML prototypes and research presentations, motivating new collaborations |
+| Work | Venue | Role |
+|---|---|---|
+| AerialGuard: Edge-Deployed Zero-Shot Visual Anomaly Detection for Autonomous UAV Patrol | IEEE CASE 2026 — accepted | First author |
+| FastSpatial: Real-Time Spatial Reasoning for Edge-Deployed Autonomous Drones | IEEE RA-L — in preparation | First author |
+| AMORE: Adaptive Multi-objective Reward Engineering for Socratic Math Tutoring with Small Language Models | ICANN 2026, Springer LNCS | Co-author |
+| Towards Blind and Low-Vision Accessibility of Lightweight VLMs and Custom LLM-Evals | MMLoSo 2025, ACL Workshop | Co-author |
 
----
-
- 💼 Highlight Project — Credit Risk Analyzer
-> 🏆 AIHack India 2025 — IIT Mandi × AiFul Japan
-
-An Explainable, Ethical, and Actionable AI platform for smarter lending.  
-Built using Streamlit, LightGBM, and SHAP, this app predicts borrower risk,  
-explains key contributing factors, evaluates fairness, and generates dynamic credit reports.
-
-🔗 [View Repository](https://github.com/pratap424/AIFUL-Credit-Risk-Analyzer)
+Indian patent granted (2024) — AI-integrated multi-sensor assistive navigation and health
+monitoring for visually impaired individuals.
 
 ---
 
- 🧰 Tech Stack
+## Selected repositories
 
- 💻 Languages & Frameworks
-`Python` · `C++` · `Streamlit` · `PyTorch` · `scikit-learn` · `LightGBM` · `OpenCV` · `ROS` · `KiCAD`
+**[pseudo_rgbd_slam](https://github.com/pratap424/pseudo_rgbd_slam)** — Replaces a depth
+sensor with a monocular metric depth network and feeds the prediction into ORB-SLAM3. ROS 2,
+with the SLAM wrapper written in C++. Trajectory error stays within 1.3x of a real Kinect;
+an ablation shows that masking 0.2% of pixels at depth boundaries accounts for a 26.9x
+difference in that error.
 
- 🧠 Core Skills
-Explainable AI (SHAP/LIME) • ML Deployment (Edge/Cloud) • Computer Vision • Feature Engineering • Autonomous Systems
+**[visdrone_mot](https://github.com/pratap424/visdrone_mot)** — Person detection and
+multi-object tracking for aerial video, with camera-motion compensation for drone ego-motion.
+74.3% MOTA and 76.9% IDF1 on VisDrone-MOT-val, and a measured TensorRT deployment path on
+Jetson Orin Nano. Includes a component-by-component ablation.
 
- ⚙️ Tools & Platforms
-Jetson Nano/Xavier • Streamlit Cloud • Kaggle • GitHub Actions • Ubuntu/WSL2 • VS Code
+**[freuid-challenge-2026](https://github.com/pratap424/freuid-challenge-2026)** —
+Identity-document fraud detection for the FREUID Challenge 2026 (IJCAI-ECAI). ConvNeXt and
+EVA02 ensemble with TTA, roughly 60 GPU-hours, plus an auditable code-freeze trail.
 
----
+**[AeroGemma](https://github.com/pratap424/AeroGemma)** — Fully offline search-and-rescue
+drone running a multimodal model on-device: visual triage, Hindi speech in and out with no
+ASR stage, and a live dashboard, all over MAVLink to a PX4 autopilot.
 
- 🔬 Current Focus
-- 🧭 Vision-Language Navigation for real-world assistive drones  
-- 🪶 Edge AI Optimization for low-power inference  
-- 🔍 Model Transparency and Trust using explainability frameworks  
+**[Towards-Blind-and-Low-Vision-Accessibility-of-Lightweight-VLMs-and-Custom-LLM-Evals](https://github.com/pratap424/Towards-Blind-and-Low-Vision-Accessibility-of-Lightweight-VLMs-and-Custom-LLM-Evals)**
+— Prompting pipelines and two accessibility evaluation frameworks for lightweight
+vision-language models, with a local open-LLM judge.
 
----
-
- 🌐 Connect With Me
-<p align="center">
-  <a href="https://github.com/pratap424"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
-  <a href="https://www.linkedin.com/in/ypsrathore/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:yashpratap424@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-</p>
-
----
-
- 📊 GitHub Stats
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=pratap424&show_icons=true&theme=tokyonight" alt="Yash's GitHub stats" width="48%"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=pratap424&theme=tokyonight" width="48%"/>
-</p>
+**[AerialGuard](https://github.com/pratap424/AerialGuard)** — Flight footage and figures for
+the CASE 2026 paper. Source is held back pending publication.
 
 ---
 
- 🧩 Featured Projects
-- [💳 Credit Risk Analyzer](https://github.com/pratap424/AIFUL-Credit-Risk-Analyzer) — Explainable AI app with SHAP and Streamlit
-- [🧠 Deepfake Detection System]() — Winner at Zentej Hackathon, used EfficientNet & MesoNet for forgery classification
-- [🚁 FlightGPT Autonomous Drone]() — Real-time obstacle avoidance & edge deployment on Jetson
-- [🏡 Smart Window Shading System]() — IoT-mechatronics hybrid system built using KiCAD & microcontrollers
+## Awards
+
+- Winner, Robotics Competition, ICSR 2024 — Odense, Denmark
+- Winner, Zentej Hackathon, IIT Mandi, 2025
 
 ---
 
- 🧩 Complete Project & Research Portfolio
+## Contact
 
- 🧠 1. AI Assist Vision
-Type: Research Project (Assistive Technology, Vision-Language Models)  
-Goal: Develop a real-time assistive system for visually impaired individuals that understands the environment and provides multimodal feedback.  
-Status: Completed — functional prototype tested locally and on GPU laptop.  
-
-Highlights:
-- Built a vision-language navigation pipeline combining scene captioning, depth estimation, and spatial audio guidance.  
-- Integrated SmolVLM2-500M for video-based scene understanding.  
-- Designed urgency-based voice feedback for adaptive guidance.
-
----
-
- 🚁 2. Flying Eyes — Interactive Vision Through Intelligent Drones
-Type: Doctoral Research Proposal (Under Dr. Amit Shukla, IIT Mandi)  
-Goal: Enable drones to act as “intelligent extensions of human vision” — understanding scenes and responding to natural commands in real time.  
-
-Core Features:
-- Vision-language understanding from drone video feeds  
-- Natural command processing (e.g., “Find person on the ground”)  
-- Dual interaction: user-initiated commands + drone-generated alerts  
-- Real-time inference with ONNX optimization  
-
-Datasets: BDD100K, Ego4D  
-Focus Areas: Vision-Language Models, Aerial Robotics, Human-Drone Interaction  
-Status: Active Research  
-
----
-
- 🧠 3. ICRS 2024 — Idea Innovation Competition
-Type: Academic Innovation Challenge (IIT Mandi)  
-Project: AI Assistant for Visually Impaired  
-Event: ICRS 2024 (Idea Innovation Track)  
-Achievement: 🏆 Winner — Innovative Idea Category  
-
-Focus:
-- Real-time assistive AI for accessibility  
-- Lightweight and efficient deep learning for embedded hardware  
-- Prototype demonstrated scene narration and obstacle avoidance
-
----
-
- 🔍 4. Additional Highlights
-- LLVM Drone Project: Built real-time obstacle avoidance and navigation for drones using Jetson Nano and edge inference.  
-- Home Automation for Adaptive Shading: Mechatronics project using KiCAD and custom PCB design.  
-- Explainability Research: Created SHAP-based frameworks for interpretability in finance and healthcare.  
-- Deepfake Detection (Zentej Hackathon): Built CNN architectures for forgery classification.
-
----
-
- 🏅 Highlights
-- 🏗️ Built and deployed end-to-end ML pipelines with explainable frontends  
-- 🤝 Collaborated on cross-disciplinary research (AI × Robotics × Mechatronics)  
-- 🧭 Continuously improving through hackathons, simulations, and real-world testing
-
----
-
- 💬 Favorite Quote
-> "Transparency builds trust — and trust builds technology."
-
----
-
-⭐ If you like my projects, don’t forget to star them on GitHub!
+[yashpratap424@gmail.com](mailto:yashpratap424@gmail.com) ·
+[LinkedIn](https://www.linkedin.com/in/ypsrathore/)
